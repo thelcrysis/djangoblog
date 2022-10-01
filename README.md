@@ -1,0 +1,2 @@
+# djangoblog
+Basic Django Blog
