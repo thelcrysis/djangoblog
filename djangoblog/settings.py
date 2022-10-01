@@ -54,7 +54,7 @@ ROOT_URLCONF = "djangoblog.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['/home/jacklouis/Desktop/Active_projects/djangoblog/templates/'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -66,6 +66,10 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_DIRS = ('/home/jacklouis/Desktop/Active_projects/djangoblog/templates/',)
+
+STATICFILES_DIRS = ("/home/jacklouis/Desktop/Active_projects/djangoblog/static/", )
 
 WSGI_APPLICATION = "djangoblog.wsgi.application"
 
