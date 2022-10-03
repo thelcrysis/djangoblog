@@ -1,2 +1,4 @@
 # djangoblog
-Basic Django Blog
+Basic Django Blog - WIP!
+
+![Screenshot](ss.png "Screenshot")
