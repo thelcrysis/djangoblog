@@ -1,65 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-    <div class="nav">
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="home">News</a></li>
-            <li><a href="about">Contact</a></li>
-            <div class="social">
-                <a href="#github"><img src="/static/github.png"></a>
-                <a href="#linkedin"><img src="/static/linkedin.png"></a>
-            </div>
-        </ul>
-        
-    </div>
+{% extends 'base.html' %}
 
-    <div class="content">
-        <div class="post">
-            <div class="title">title</div>
-            <div class="body">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</div>
-            <div class="foot">
-                <div class="date">23.2.2022.</div>
-                <div class="author">me</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="title">title</div>
-            <div class="body">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</div>
-            <div class="foot">
-                <div class="date">23.2.2022.</div>
-                <div class="author">me</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="title">title</div>
-            <div class="body">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</div>
-            <div class="foot">
-                <div class="date">23.2.2022.</div>
-                <div class="author">me</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="title">title</div>
-            <div class="body">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</div>
-            <div class="foot">
-                <div class="date">23.2.2022.</div>
-                <div class="author">me</div>
-            </div>
-        </div>
-    </div>
-</body>
-<footer>
-    made with haste <div style="color:white; font-style: italic;">by thelcrysis </div>
-</footer>
-</html>
+{%block content%}
+{% for post in posts%}
+<div class="post">
+  <div class="title">{{ post.title }}</div>
+  <div class="body">{{post.body_preview}}</div>
+  <div class="foot">
+    <div class="date">{{post.date}}</div>
+    <div class="author">{{post.author}}</div>
+  </div>
+</div>
+{% endfor%}
+
+{% endblock%}

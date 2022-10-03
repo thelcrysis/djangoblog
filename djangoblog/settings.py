@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "posts"
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = "djangoblog.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['/home/jacklouis/Desktop/Active_projects/djangoblog/templates/'],
+        "DIRS": ['templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -66,10 +67,6 @@ TEMPLATES = [
         },
     },
 ]
-
-TEMPLATE_DIRS = ('/home/jacklouis/Desktop/Active_projects/djangoblog/templates/',)
-
-STATICFILES_DIRS = ("/home/jacklouis/Desktop/Active_projects/djangoblog/static/", )
 
 WSGI_APPLICATION = "djangoblog.wsgi.application"
 

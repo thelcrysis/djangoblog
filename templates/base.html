@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static "stylesheet.css"%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <div class="social">
+          <a href="#github"><img src="{% static 'github.png' %}" /></a>
+          <a href="#linkedin"><img src="{% static 'linkedin.png' %}" /></a>
+        </div>
+      </ul>
+    </div>
+
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+  <footer>
+    made with haste
+    <div style="color: white; font-style: italic">by thelcrysis</div>
+  </footer>
+</html>
